@@ -80,7 +80,7 @@ io.on('connection',function(socket){
 function connectToDB (cb) {
 	MongoClient.connect(url, function(err, dbCon) {
 	  if (err) throw err;
-	  db = dbCon.db("mydb");
+	  db = dbCon.db("GlobalDB");
 	  cb(null,true)
 	});
 };
@@ -201,7 +201,7 @@ function step1(userName,cb){
             throw err;
             return;
           }
-          if(usersList[ip]["name"]){
+          if(usersList[ip]){
                ev.emit("sendWelComeMassage",usersList[ip]);
           }
         });
@@ -211,7 +211,7 @@ function step1(userName,cb){
  }
 
  function checkUserList(data){
- 	step1(data["name"],function(err,res){
+ 	step1(data["userName"],function(err,res){
 		if(err){
 			throw err;
 			return;
