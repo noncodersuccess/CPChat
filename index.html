@@ -1,0 +1,55 @@
+<html>
+<head>
+    <title>Live Chat</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+    <link rel="stylesheet" type="text/css" href="/chatStyle.css">
+</head>
+<body>
+    <div class="headerHolder">
+        <h1>CP Chat</h1>
+    </div>
+    <div class="onlineCls">
+        <div>Online users</div>
+    </div>
+    <div class="chatholder">
+    	<div id="onlineUserHolder" class="onlineMain"></div>
+    </div>
+    <div id="main1">
+        <div id="main2">
+           <div id="mainHolder" class="fieldHolder scorllHandle">
+
+           </div>
+           <div id="typeingMassage" class="fieldHolder">
+
+           </div>
+        </div>
+    </div>
+    <div id="chlid1">
+        <div id="chlid2">
+            <div id="chlid3" class="fieldHolder">
+               <input type="text" placeholder="YourName" id="field1" class="fieldChild">
+            </div>
+            <div id="chlid4" class="fieldHolder">
+               <input type="text" placeholder="Type Your Masseage" id="field2" class="fieldChild">
+            </div>
+            <div id="chlid5" class="fieldHolder">
+               <input type="button" value="send" id="field3" class="fieldChild" disabled = "disabled">
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="/chatJs.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyATuLm_0WxvQ4i4ZTvthyOlu1c0NGXXWKo",
+        authDomain: "cp-chat-57c33.firebaseapp.com",
+        databaseURL: "https://cp-chat-57c33.firebaseio.com",
+        projectId: "cp-chat-57c33",
+        storageBucket: "",
+        messagingSenderId: "1053444328508"
+      };
+      firebase.initializeApp(config);
+    </script>
+</body>
+</html>

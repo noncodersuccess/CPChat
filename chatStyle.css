@@ -1,0 +1,75 @@
+
+.headerHolder{
+    width: 100%;
+    background-color: blue;
+    color: white;
+    padding: 2px;
+    text-align: center;
+}
+
+#main1{
+    width: 100%;
+    height: 64vh;
+}
+
+.fieldHolder{
+    width: 50%;
+    margin: auto;
+    padding: 4px;
+}
+
+.fieldChild{
+    width: 100%;
+    padding: 10px;
+    outline: none;
+}
+
+.nameHollder{
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.scorllHandle{
+    max-height: 60vh;
+    overflow: auto;
+}
+.onlineCls{
+    position: absolute;
+    /* border: 1px solid grey; */
+    padding: 10px;
+    right: 0px;
+    margin-right: 157px;
+    margin-top: 15px;
+    border-color: lightgrey;
+}
+.chatholder{
+    position: absolute;
+    width: 15%;
+    height: 28vh;
+    border: 1px solid;
+    right: 0px;
+    margin-top: 58px;
+    margin-right: 92px;
+    border-color: darkgrey;
+    overflow: auto;
+    max-height: 204px;
+}
+
+.onlineChild{
+	float: right;
+    color: green;
+    font-weight: bold;
+}
+
+.onlineMain{
+   padding: 10px;
+}
+
+.nameHolder{
+	text-transform: capitalize;
+}
+
+.redClass{
+	color: red !important;
+}
