@@ -30,12 +30,17 @@ masseage.addEventListener("keypress",function(){
 // listening server events
 
 socket.on("sendingToAllUserToMasseage",function(data){
-     var reverseData = data.reverse();
-	 typeing.innerHTML = '';
-     output.innerHTML = '';
+     if(data && data.length > 0){
+       var reverseData = data.reverse();
+       typeing.innerHTML = '';
+       output.innerHTML = '';
         reverseData.forEach(function(value){
            output.innerHTML += '<p><strong> '+ value.userName +' :</strong> '+ value.masseage +'</p>'; 
         });
+     }else{
+       typeing.innerHTML = '';
+       output.innerHTML = '';
+     }
 });
 
 socket.on('liveBroadcasting',function(data){
@@ -54,10 +59,14 @@ socket.on('sendWelComeMassage',function(data){
 socket.on('broadcastOnlineUsers',function(data){
      usersList.innerHTML = '';
      data.forEach(function(val){
+        if(val["online"] && val["name"]){
           if(val["online"]){
              usersList.innerHTML += '<div class="mainOnlineHolder"><span class="nameHolder">'+val["name"]+'</span><span class="onlineChild">Online</span></div>';
           }else{
              usersList.innerHTML += '<div class="mainOnlineHolder"><span class="nameHolder">'+val["name"]+'</span><span class="onlineChild redClass">Offline</span><div class="mainOnlineHolder">';
           }
+        }else{
+            usersList.innerHTML = '';
+        }
      })
 });
