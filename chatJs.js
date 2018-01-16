@@ -59,14 +59,10 @@ socket.on('sendWelComeMassage',function(data){
 socket.on('broadcastOnlineUsers',function(data){
      usersList.innerHTML = '';
      data.forEach(function(val){
-        if(val["online"] && val["name"]){
           if(val["online"]){
-             usersList.innerHTML += '<div class="mainOnlineHolder"><span class="nameHolder">'+val["name"]+'</span><span class="onlineChild">Online</span></div>';
+             val["name"] ? usersList.innerHTML += '<div class="mainOnlineHolder"><span class="nameHolder">'+val["name"]+'</span><span class="onlineChild">Online</span></div>' : '';
           }else{
-             usersList.innerHTML += '<div class="mainOnlineHolder"><span class="nameHolder">'+val["name"]+'</span><span class="onlineChild redClass">Offline</span><div class="mainOnlineHolder">';
+             val["name"] ? usersList.innerHTML += '<div class="mainOnlineHolder"><span class="nameHolder">'+val["name"]+'</span><span class="onlineChild redClass">Offline</span><div class="mainOnlineHolder">' : '';
           }
-        }else{
-            usersList.innerHTML = '';
-        }
      })
 });
