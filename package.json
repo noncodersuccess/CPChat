@@ -1,0 +1,30 @@
+{
+  "name": "livechat",
+  "version": "1.0.0",
+  "description": "We Can Chat Live",
+  "main": "server.js",
+  "scripts": {
+    "test": "yes"
+  },
+  "repository": {
+    "type": "git",
+    "url": "yes"
+  },
+  "keywords": [
+    "yes"
+  ],
+  "author": "shubham srivastava",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/functions-emulator": "^1.0.0-alpha.29",
+    "color": "^2.0.1",
+    "express": "^4.16.2",
+    "firebase": "^4.8.2",
+    "firebase-tools": "^3.16.0",
+    "mongodb": "^3.0.1",
+    "mongoskin": "^2.1.0",
+    "nodemon": "^1.14.11",
+    "public-ip": "^2.4.0",
+    "socket.io": "^2.0.4"
+  }
+}
