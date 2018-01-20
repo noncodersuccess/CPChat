@@ -1,7 +1,6 @@
-
 .headerHolder{
     width: 100%;
-    background-color: blue;
+    background-color: #ff5353;
     color: white;
     padding: 2px;
     text-align: center;
@@ -9,7 +8,7 @@
 
 #main1{
     width: 100%;
-    height: 64vh;
+    height: 57vh;
 }
 
 .fieldHolder{
@@ -31,7 +30,7 @@
 }
 
 .scorllHandle{
-    max-height: 60vh;
+    max-height: 55vh;
     overflow: auto;
 }
 .onlineCls{
@@ -71,5 +70,38 @@
 }
 
 .redClass{
-	color: red !important;
+	color: #ff5353 !important;
+}
+
+.a1{
+    padding: 10px;
+    background: #ff5353;
+}
+
+.a2{
+   color: white;
+   text-decoration: none; 
+}
+.a3 {
+    margin-top: 15px;
+}
+.userListCls{
+    display: -webkit-inline-box;
+}
+
+.userListChat{
+    position: absolute;
+    width: 18%;
+    height: 28vh;
+    border: 1px solid;
+    right: 0px;
+    margin-top: 58px;
+    margin-right: 50px;
+    border-color: darkgrey;
+    overflow: auto;
+    max-height: 204px;
+}
+.mainUserList{
+    padding: 10px;
+    cursor: pointer;
 }
