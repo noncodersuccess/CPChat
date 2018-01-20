@@ -1,18 +1,36 @@
 <html>
 <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
     <title>Live Chat</title>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+    <script src="/jquery-1.11.1.js"></script>
+    <script src="/bootstrap.min.css"></script>
     <link rel="stylesheet" type="text/css" href="/chatStyle.css">
+    <script type="text/javascript" src="/hogan.min.js"></script> 
+    <script type="text/javascript" src='/templates.js'></script>
 </head>
 <body>
     <div class="headerHolder">
         <h1>CP Chat</h1>
     </div>
+     <div class="a3">
+      <span class="a1"><a href="/auth/logout" class="a2">Logout</a></span>
+     </div>
+     <div class="">
+         <div><img src="https://lh3.googleusercontent.com/-8YM0O_IbM_c/AAAAAAAAAAI/AAAAAAAAAIk/aDismV4UTlk/photo.jpg?sz=50"></div>
+         <div>shuham srivastava</div>
+     </div>
+     <div class="col-md-12">
+         <div class="col-md-3"></div>
+         <div class="col-md-6"></div>
+         <div class="col-md-3"></div>
+     </div>
     <div class="onlineCls">
         <div>Online users</div>
     </div>
     <div class="chatholder">
-    	<div id="onlineUserHolder" class="onlineMain"></div>
+      <div id="onlineUserHolder" class="onlineMain"></div>
     </div>
     <div id="main1">
         <div id="main2">
@@ -23,6 +41,12 @@
 
            </div>
         </div>
+    </div>
+    <div class="onlineCls">
+        <div>CP Chat users</div>
+    </div>
+    <div class="userListChat">
+      <div id="cpUserHolder" class="onlineMain"></div>
     </div>
     <div id="chlid1">
         <div id="chlid2">
@@ -37,8 +61,11 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="/chatJs.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+    <script type="text/javascript" src="/chatJs.js"></script> 
+    <script type="text/javascript">
+        new CpClient();
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
     <script>
       // Initialize Firebase
       var config = {
